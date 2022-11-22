@@ -15,14 +15,7 @@ def word_to_words_v1(a=word, b=word_length):
     end = time.time()-start
     return sorted(array)
 
-
 # Random ragemode will be there:)
-
-
-
-
-
-
 def word_in_list(a=word, b=word_length):  # Функция вызывает предыдующую, которое создает слово, и проверяет есть ли оно в моем списке
     array_with_newWords_notSplited = []
     def word_to_words_v2():  # Функция создает слово по заданным параметрам
@@ -46,12 +39,13 @@ def word_in_list(a=word, b=word_length):  # Функция вызывает пр
         else:
             array_with_newWords_notSplited.append(word_to_words_v2())
     end = time.time()-start
+    print(' Ушло времени на генерацию =', end)
     return sorted(list(set(array_with_newWords_notSplited)))
 
 
 # Так же способ расчитанный на рандом, но сделанный через срезы и шафл
 
-def shuffled_arr(a=word,b=word_length): #Провел гениальный рефакторинг,засунув функцию в функцию, что позволило нормально прогонять автотесты
+def shuffled_arr(a=word,b=word_length): # Провел гениальный рефакторинг,засунув функцию в функцию, что позволило нормально прогонять автотесты
     def shuffle_words():
         charlst = list(a)
         random.shuffle(charlst)
@@ -66,6 +60,7 @@ def shuffled_arr(a=word,b=word_length): #Провел гениальный ре�
         else:
             continue
     end=time.time()-start
+    print(' Ушло времени на генерацию =', end)
     return sorted(shuf_list)
 
 word_to_words_v1()
