@@ -1,10 +1,12 @@
 import requests
 
 # Получает заголовки ответа и запроса
+def get_response(url='https://playground.learnqa.ru/api/hello',params={}):
+    response = requests.get(url,params)
+    # print(response.text)
+    # print(response.headers)
+    return response
 
-response = requests.get('https://playground.learnqa.ru/api/show_all_headers')
-print(response.text)
-print(response.headers)
 
 # Получает Cookies ответа и выводит его
 
