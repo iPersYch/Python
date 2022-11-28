@@ -10,3 +10,5 @@ def wave(people: str):
     return print(fin_arr)
 
 wave("ABCDEFGHIJKLMNOPQR")
+
+# Example: wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
